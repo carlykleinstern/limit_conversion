@@ -1,5 +1,5 @@
 #CALL SEQUENCE: merge_test8.py
-#PURPOSE: Convert limits (DD to LHC), compare plots
+#PURPOSE: Convert limits (DD to LHC), compare plots. Merges axial_p and axial_n interaction limit conversions.
 #DATE: 18- Dec 2017
 #WRITTEN BY: Carly KleinStern, with help from Bjoern Penning and Ryan Wang
 
