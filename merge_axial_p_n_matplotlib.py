@@ -91,16 +91,26 @@ array1, array2 = conversion_axial(path_n)
 array3, array4 = conversion_axial(path_p)
 
 
-plt.plot(array1, array2, 'k-', color='b', label="LUXSD_n")
-plt.plot(array3, array4, 'k-', color='r', label="PICOSD_p")
-plt.title("AXIAL VECTOR, proton & neutron")
-plt.yscale("log")
+plt.title("AXIAL VECTOR; LUXSD_n, LUXSD_p & CMS")
+plt.plot(array1, array2, 'k-', color='b', label="LUX_2016_SD_n")
+plt.plot(array3, array4, 'k-', color='r', label="LUX_2016_SD_p")
+plt.plot(mMed_lhc_a, mDM_lhc_a, 'k-', color='g', label="CMS_axial")
 plt.ylabel("mDM")
 plt.xlabel("mMed")
-plt.legend(loc=4, ncol=1, borderaxespad=0.)
 plt.grid(True)
-#plt.show()
 
-#plt.savefig("matplot_axial.pdf")
+#make graph with log scale
+plt.yscale("log")
+plt.legend(loc=4, ncol=1, borderaxespad=0.)
+plt.savefig("Axial_LUX_update_log.pdf")
+
+#make graph with linear scale
+plt.yscale("linear")
+plt.legend(loc=1, ncol=1, borderaxespad=0.)
+plt.ylim((-1000,10000))
+plt.xlim((0,2500))
+plt.savefig("Axial_LUX_update_lin.pdf")
+
+plt.close()
 
 
